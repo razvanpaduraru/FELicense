@@ -126,16 +126,20 @@ class IrusTable2 extends LitElement {
       const year = date.split(".")[2];
       this.content = html`
         <h1 id="sunrise">
+          <strong>
           Sunrise at
           ${Math.round(data["UT(RT) - local timezone"][1]) +
             ":" +
             Math.round(data["UT(RT) - local timezone"][2]) || "--"}
+          </strong>
         </h1>
         <h1 id="sunset">
+          <strong>
           Sunset at
           ${Math.round(data["UT(ST) - local timezone"][2]) +
             ":" +
             Math.round(data["UT(ST) - local timezone"][3]) || "--"}
+          </strong>
         </h1>
         <details>
           <summary>
